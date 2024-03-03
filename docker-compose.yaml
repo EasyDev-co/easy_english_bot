@@ -41,28 +41,6 @@ services:
       - .env
     restart: always
 
-  app-admin:
-    <<: *python
-    container_name: ${PROJECT_SLUG}_app_admin
-    build:
-      context: .
-      dockerfile: admin.dockerfile
-    env_file:
-      - .env
-    expose:
-      - 80
-    restart: on-failure
-
-  nginx:
-    build: ./nginx/local
-    expose:
-      - 80
-    ports:
-      - "80:80"
-      - "443:443"
-    networks:
-      - internal
-
 volumes:
   app_db-template:
   poetry-volume:
