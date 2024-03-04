@@ -11,6 +11,7 @@ SEND_WORD = """
 """
 
 irregular_verbs = {
+    "be": ("was/were", "been", "быть"),
     "begin": ("began", "begun", "начинать"),
     "bend": ("bent", "bent", "сгибать, гнуть"),
     "bet": ("bet", "betted", "держать пари"),
